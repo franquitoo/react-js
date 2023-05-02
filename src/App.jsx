@@ -11,8 +11,6 @@ function App() {
     username: user.name
   }
 
-  user = usercolor
-
   return (
     <>
       <header>
