@@ -12,8 +12,8 @@ const Header = () =>(
                     <li className='headerulli'><a href=""><h3>Busos</h3></a></li>
                     <li className='headerulli'><a href=""><h3>Zapatillas</h3></a></li>
                 </ul>
-                <div className='headerdivihijo'>
-                    <i className='headeri' class="fa-sharp fa-regular fa-cart-shopping"></i>
+                <div className='headerdivhijo'>
+                    <img className='headerdivhijocarrito' src="https://cdn4.vectorstock.com/i/1000x1000/24/33/realistic-empty-supermarket-shopping-cart-vector-21042433.jpg" alt="una imagen" />
                     <p>1</p>
                 </div>
             </nav>

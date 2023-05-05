@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     background-color: red;
+    width: 100%;
 
     &img{
         padding: 1rem;
@@ -11,6 +12,7 @@
 
     &nav{
         display: flex;
+        gap: 1rem;
     }
 
     &div{
@@ -20,12 +22,20 @@
         &hijo{
             display: flex;
             gap: 1rem;
+            align-items: center;
+            padding-right: 1rem;
+
+            &carrito{
+                height: 2rem;
+                width: 2rem;
+            }
         }
     }
 
     &ul{
         display: flex;
         gap: 1rem;
+        list-style-type: none;
 
     }
 }
