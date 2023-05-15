@@ -1,10 +1,11 @@
 import '../contenedor/contenedor.scss'
+import Itemcontenedor from '../Itemcontenedor/Itemcontenedor';
 
 const Contenedor = () =>(
-    <div>
-        <h1>
-            Hola coders
-        </h1>
+    <div className='cont'>
+         <Itemcontenedor/>
+         <Itemcontenedor/>
+         <Itemcontenedor/>
     </div>
 )
 
