@@ -1,5 +1,6 @@
 import productos from "../../data/productos";
 import { useEffect, useState } from "react";
+import Itemlist from "./Itemlist";
 
 function getData(){
   return new Promise(resolve =>{
@@ -10,6 +11,7 @@ function getData(){
 function Itemlistcontainer() {
 
 let [products, setProducts] = useState([]);
+console.log(products);
 
 useEffect( () => {
   getData().then((respuesta) => {
@@ -20,16 +22,7 @@ useEffect( () => {
 
   return (
     <div>
-      Itemlistcontainer{products.map( (ItemInArray) => (
-       <Item 
-        key={ItemInArray.id}
-        id={ItemInArray.id}
-        title={ItemInArray.title}
-        precio={ItemInArray.precio}
-        description={ItemInArray.descripcion}
-        categoria={ItemInArray.categoria}
-        img={ItemInArray.img}
-        />))}
+      <Itemlist products={products}/>
     </div>
   )
 }

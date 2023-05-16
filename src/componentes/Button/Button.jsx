@@ -1,5 +1,4 @@
 export default function Button(props) {
-    console.log(props);
 
     const styleBtn = {
       backgroundColor: props.color,
