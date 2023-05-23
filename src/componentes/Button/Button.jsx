@@ -1,3 +1,5 @@
+import "../Button/Button.scss"
+
 export default function Button(props) {
 
     const styleBtn = {
@@ -5,7 +7,7 @@ export default function Button(props) {
     };
   
     return (
-      <button onClick={props.onClick} style={styleBtn}>
+      <button className="button" onClick={props.onClick} style={styleBtn}>
         {props.children}
       </button>
     );

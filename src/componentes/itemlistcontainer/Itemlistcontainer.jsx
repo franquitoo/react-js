@@ -1,6 +1,7 @@
 import productos from "../../data/productos";
 import { useEffect, useState } from "react";
-import Itemlist from "./Itemlist";
+import Itemlist from "../itemlist/Itemlist";
+import "../itemlistcontainer/itemlistcontainer.scss"
 
 function getData(){
   return new Promise(resolve =>{
@@ -21,7 +22,7 @@ useEffect( () => {
 }, [])
 
   return (
-    <div>
+    <div className="itemlistcontainer">
       <Itemlist products={products}/>
     </div>
   )

@@ -17,12 +17,12 @@ function Restar(){
   return (
     <div className="counter">
         <div className="counterdiv">
-            <button onClick={Restar}>-</button>
-            <p>{count}</p>
-            <button onClick={Sumar}>+</button>
+            <button className="counterbtn" onClick={Restar}>-</button>
+            <p className="counternum">{count}</p>
+            <button className="counterbtn" onClick={Sumar}>+</button>
         </div>
         <div className="counterdivcarrito">
-            <button>Agregar al carrito</button>
+            <button className="counterbtn">Agregar al carrito</button>
         </div>
     </div>
   )

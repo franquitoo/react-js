@@ -1,13 +1,13 @@
 
 import './App.scss'
 import Header from './componentes/header/Header'
-import Contenedor from './componentes/contenedor/Contenedor'
+import Itemlistcontainer from './componentes/itemlistcontainer/Itemlistcontainer'
 
 function App() {
   return(
   <div>
     <Header />
-    <Contenedor />
+    <Itemlistcontainer/> 
   </div>
   )
 }
