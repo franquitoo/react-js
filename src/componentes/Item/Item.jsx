@@ -1,8 +1,8 @@
-import productos from "../../data/productos";
+
 import "./Item.scss";
 import Button from "../Button/Button";
 import ItemCount from "../itemCount/ItemCount";
-import Itemlistcontainer from "../itemlistcontainer/Itemlistcontainer";
+
 
 function Item({title,img,precio,categoria}){
   return (

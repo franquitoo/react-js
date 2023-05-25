@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import productos from "../../data/productos";
-import 
 
 function getItemData(){
     return new Promise ( (resolve) => {
