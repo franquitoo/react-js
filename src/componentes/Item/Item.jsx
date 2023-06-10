@@ -2,6 +2,7 @@
 import "./Item.scss";
 import Button from "../Button/Button";
 import ItemCount from "../itemCount/ItemCount";
+import { Link } from "react-router-dom";
 
 
 function Item({title,img,precio,categoria}){
@@ -19,7 +20,7 @@ function Item({title,img,precio,categoria}){
           <small>{categoria}</small>
         </div>
         <div className="itemdiv">
-          <Button color="red">Ver detalle</Button>
+          <Button color="red"><Link to="./itemdetailcontainer/itemdetailcontainer"><h5 className="detalle">Ver detalle</h5></Link></Button>
           <ItemCount stock={10} />
         </div>
       </div>

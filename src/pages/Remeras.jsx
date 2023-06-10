@@ -9,4 +9,4 @@ function Remeras() {
   )
 }
 
-export default Remeras
+export default Remeras;

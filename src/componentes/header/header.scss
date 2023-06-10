@@ -5,6 +5,16 @@
     background-color: rgb(253, 2, 2);
     width: 100%;
 
+    &nav{
+        display: flex;
+        align-items: center;
+    }
+
+    &ul{
+        display: flex;
+        gap: 2rem;
+    }
+
     &anchor{
         color: black;
     }
@@ -23,32 +33,11 @@
     &div{
         display: flex;
         gap: 1rem;
+        margin-right: 1rem;
     }
 
 }
 
 
-// &nav{
-//     display: flex;
-//     gap: 1rem;
-// }
 
-// &div{
-//     display: flex;
-//     align-items: center;
-
-//     &hijo{
-//         display: flex;
-//         gap: 1rem;
-//         align-items: center;
-//         padding-right: 1rem;
-//     }
-// }
-
-// &ul{
-//     display: flex;
-//     gap: 1rem;
-//     list-style-type: none;
-
-// }
 
