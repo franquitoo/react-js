@@ -1,6 +1,7 @@
-// 
 import '../header/header.scss'
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { cartContext } from '../../context/cartContext';
 
 
 const Header = () =>(
@@ -12,11 +13,24 @@ const Header = () =>(
                 <li className='headerli'><Link className='headeranchor' to="../pages/Remeras"><h3>Remeras</h3></Link></li>
                 <li className='headerli'><Link className='headeranchor' to="../pages/Busos"><h3>Busos</h3></Link></li>
                 <li className='headerli'><Link className='headeranchor' to="../pages/Zapatillas"><h3>Zapatillas</h3></Link></li>
+                <CartWidget/>
             </ul>
         </nav>
-        {/* <CartWidget/> */}
     </header>
 );
+
+function CartWidget() {
+    
+const { countItems } = useContext(cartContext);
+
+        return(
+        <div className='headerdiv'>
+            <i class="fa-solid fa-cart-shopping-fast"></i>
+            <span>{countItems()}</span>
+        </div>
+    );
+        
+}
 
 export default Header;
 

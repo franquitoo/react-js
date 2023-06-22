@@ -1,4 +1,3 @@
-import { createContext, useState } from 'react';
 import './App.scss'
 import Header from './componentes/header/header';
 // pages
@@ -12,12 +11,12 @@ import Itemdetailcontainer from './componentes/itemdetailcontainer/itemdetailcon
 // detalles
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 // context
-import { cartContext } from './context/cartContext';
+import { cartContextProvider } from './context/cartContext';
 
 function App() {
 
   return(
-    <>
+    <cartContextProvider>
       <BrowserRouter>
         <Header/>
         <Routes>
@@ -29,8 +28,7 @@ function App() {
         <Route path='*' element={<h4>Error 404</h4>}/>
         </Routes>
       </BrowserRouter>
-    </>
-    
+    </cartContextProvider>
   )
 }
 
