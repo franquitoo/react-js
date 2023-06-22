@@ -25,8 +25,8 @@ useEffect( () => {
      });
 }, [])
 
-function onAddToCart(product,count){
-  alert(`agregaste ${count} ${product.title} al carrito`)
+function onAddToCart(product,stock){
+  alert(`agregaste ${stock} ${product.title} al carrito`)
 }
 
   return (
@@ -38,7 +38,7 @@ function onAddToCart(product,count){
         <h2>{productos.title}</h2>
         <h5>descuento de %{productos.descuento}</h5>
         <h2>${productos.precio}</h2>
-        <ItemCount count={productos.stock} className="itemcount" onAddToCart={onAddToCart} />
+        <ItemCount stock={productos.stock} className="itemcount" onAddToCart={onAddToCart} />
         <button onClick={ ()=> removeItem(id)}>cancelar</button>
       </div>
     </div>
