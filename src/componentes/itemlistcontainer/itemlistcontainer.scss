@@ -1,4 +1,19 @@
 .itemlistcontainer{
     display: flex;
     gap: 1rem;
+    background-image: linear-gradient(to left, rgb(240, 153, 153),red);
+}
+
+.detail{
+    display: flex;
+    justify-content: space-evenly;
+
+    &img{
+        height: 22rem;
+        max-width: 20rem;
+    }
+}
+
+.counter{
+    margin-bottom: 1rem;
 }

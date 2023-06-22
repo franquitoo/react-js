@@ -1,8 +1,8 @@
 import { useState } from "react";
-import "../itemCount/itemCount.scss";
+import "./ItemCount.scss";
 
 
-function itemCount({stock}) {
+function ItemCount({stock, onAddToCart}) {
 
 const [count, SetCount] = useState(1);
 
@@ -22,10 +22,10 @@ function Restar(){
             <button className="counterbtn" onClick={Sumar}>+</button>
         </div>
         <div className="counterdivcarrito">
-            <button className="counterbtn">Agregar al carrito</button>
+            <button onClick={ () =>{onAddToCart(count)} } className="counterbtn">Agregar al carrito</button>
         </div>
     </div>
   )
 }
 
-export default itemCount
+export default ItemCount

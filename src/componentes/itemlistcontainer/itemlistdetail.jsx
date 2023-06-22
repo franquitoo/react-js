@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import productos from "../../data/productos";
+import ItemCount from "../itemCount/itemCount";
+import "../itemlistcontainer/Itemlistcontainer.scss";
 
 function getItemData(){
     return new Promise ( (resolve) => {
@@ -9,7 +11,7 @@ function getItemData(){
     })
 }
 
-function itemlistdetail() {
+function Itemlistdetail({productos,removeItem},onAddToCart) {
 
 // ESTADO //
 
@@ -23,9 +25,24 @@ useEffect( () => {
      });
 }, [])
 
+function onAddToCart(product,count){
+  alert(`agregaste ${count} ${product.title} al carrito`)
+}
+
   return (
-    <div>itemlistdetail</div>
+    <div className="detail">
+      <div>
+        <img className="detailimg" src={productos.img} alt="imagen"></img>
+      </div>
+      <div>
+        <h2>{productos.title}</h2>
+        <h5>descuento de %{productos.descuento}</h5>
+        <h2>${productos.precio}</h2>
+        <ItemCount count={productos.stock} className="itemcount" onAddToCart={onAddToCart} />
+        <button onClick={ ()=> removeItem(id)}>cancelar</button>
+      </div>
+    </div>
   )
 }
 
-export default itemlistdetail
+export default Itemlistdetail

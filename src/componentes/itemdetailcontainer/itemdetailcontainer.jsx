@@ -1,28 +1,41 @@
-import "./itemdetailcontainer.scss"
-import productos from "../../data/productos"
+import { useContext, useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import productos from "../../data/productos";
+import Itemlistdetail from "../itemlistcontainer/itemlistdetail";
+import "../itemdetailcontainer/itemdetailcontainer.scss";
+import { cartContext } from "../../context/cartContext";
 
-function itemdetailcontainer({}) {
-  return (
-    <div className="itemdetailcontainer">{productos.map( (itemindetail) => (
-        <div>
-            <section>
-                <div>
-                    <img src={itemindetail.img} alt="imagen" />
-                    <h4>{itemindetail.precio}</h4>
-                </div>
-            </section>
-            <section>
-                <div>
-                    <h3>{itemindetail.categoria}</h3>
-                    <h2>{itemindetail.title}</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia provident earum distinctio est culpa. Delectus beatae eum nihil officia temporibus, accusantium, eius, accusamus quas ullam quam doloribus exercitationem vero repudiandae.</p>
-                </div>
-            </section>    
+function ItemDetailContainer() {
+
+    const [product, setProduct] = useState([]) ;
+    const context = useContext(cartContext);
+    const id = useParams().id;  
+
+    const getProducto = () => {                      
+        return new Promise((resolve, reject) => {    
+            setTimeout(() => {    
+                return resolve(productos)            
+            }, 100)
+        })
+    }
+    useEffect(() => {
+        const myProduct = async () => {             
+        try {
+            const res = await getProducto()         
+            const info = res.find(e => e.id === parseInt(id))                                                 
+            setProduct(info) 
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    myProduct();  
+    }, [id]) 
+
+    return (
+        <div className="itemdetail">
+            <Itemlistdetail productos={product}></Itemlistdetail> 
         </div>
-    ) )}
+    )
+};
 
-    </div>
-  )
-}
-
-export default itemdetailcontainer
+export default ItemDetailContainer; 

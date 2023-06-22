@@ -1,4 +1,10 @@
 .itemdetailcontainer{
     display: flex;
     justify-content: space-evenly;
+    background-image: linear-gradient(to right, white,red);
+}
+
+.itemdetail{
+    padding: 1rem;
+    background-image: linear-gradient(to right, rgb(231, 171, 171),red);
 }

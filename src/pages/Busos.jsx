@@ -9,4 +9,4 @@ function Busos() {
   )
 }
 
-export default busos;
+export default Busos;
