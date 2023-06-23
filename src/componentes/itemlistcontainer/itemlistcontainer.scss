@@ -17,3 +17,18 @@
 .counter{
     margin-bottom: 1rem;
 }
+
+.ternario{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.iralcarrito{
+    font-size: 2rem;
+    color: white;
+    border: white solid 1px;
+    background-image: linear-gradient(to left, rgb(219, 129, 129),red);
+    border-radius: 1rem;
+}

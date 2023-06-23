@@ -5,6 +5,7 @@ import Homepage from "./pages/Homepage";
 import Remeras from "./pages/Remeras";
 import Busos from "./pages/Busos";
 import Zapatillas from "./pages/Zapatillas";
+import CartView from "./componentes/cartView/cartView";
 // pages
 // detalles
 import Itemdetailcontainer from "./componentes/itemdetailcontainer/itemdetailcontainer";
@@ -23,6 +24,7 @@ function App() {
                     <Route path='/pages/Remeras' element={<Remeras />} />
                     <Route path='/pages/Busos' element={<Busos />} />
                     <Route path='/pages/Zapatillas' element={<Zapatillas />} />
+                    <Route path='/componentes/cartView/CartView' element={<CartView/>} />
                     <Route path='/detail/:id' element={<Itemdetailcontainer />}/>
                     <Route path='*' element={<h4>Error 404</h4>} />
                 </Routes>
