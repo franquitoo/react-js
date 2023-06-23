@@ -1,10 +1,11 @@
 const busos = [
-    {
+      {
         id:1,
         title: "Butterfly",
         precio: 100,
-        categoria: "busos",
-        img: "/imagenes/butterflyy.jpeg"
+        descuento: 15,
+        img: "/imagenes/butterflyy.jpeg",
+        stock:10
       },
       {
         id:2,
@@ -17,8 +18,9 @@ const busos = [
         id:3,
         title: "USA",
         precio: 120,
-        categoria: "busos",
-        img:"/imagenes/usa.webp"
+        descuento: 5,
+        img:"/imagenes/usa.webp",
+        stock:15
       },
       {
         id:4,
@@ -32,6 +34,7 @@ const busos = [
         title: "White passion",
         precio: 110,
         categoria: "busos",
+        descuento: 27,
         img: "/imagenes/white.webp"
       },
 ]

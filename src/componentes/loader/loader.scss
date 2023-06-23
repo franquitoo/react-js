@@ -1,0 +1,14 @@
+.cargando{
+    text-align: center;
+    padding: 2rem;
+}
+
+.loader{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem;
+    background-image: linear-gradient(to left, rgb(240, 153, 153),red);
+
+}

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { cartContext } from '../../context/cartContext';
 
-
 const Header = () =>(
     <header className='header'>
         <img className='headerimg' src="https://res.cloudinary.com/teepublic/image/private/s--idFR46kg--/t_Preview/b_rgb:191919,c_limit,f_auto,h_630,q_90,w_630/v1603684037/production/designs/15422579_0.jpg" alt="Imagen" />
@@ -25,7 +24,7 @@ const { countItems } = useContext(cartContext);
 
         return(
         <div className='headerdiv'>
-            <i class="fa-solid fa-cart-shopping-fast"></i>
+            <img className='carritoimg' src="/public/imagenes/carrito.jpg" alt="imagen" />
             <span>{countItems()}</span>
         </div>
     );

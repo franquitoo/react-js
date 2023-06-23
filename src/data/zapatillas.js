@@ -4,6 +4,7 @@ const zapatillas = [
     title: "Air max 1",
     precio: 110,
     categoria: "Zapatillas",
+    descuento: 35,
     img: "/imagenes/nikepink.jpeg",
     },
     {
@@ -11,6 +12,7 @@ const zapatillas = [
     title: "Adiddas one",
     precio: 90,
     categoria: "Zapatillas",
+    descuento: 15,
     img: "/imagenes/adiddasone.jpeg",
     },
     {
@@ -18,6 +20,7 @@ const zapatillas = [
     title: "Jordan 4",
     precio: 130,
     categoria: "Zapatillas",
+    descuento: 10,
     img: "/imagenes/jordan4.jpeg",
     },
 ]

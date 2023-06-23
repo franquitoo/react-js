@@ -3,11 +3,12 @@ import { useParams } from "react-router-dom";
 import productos from "../../data/productos";
 import Itemlistdetail from "../itemlistcontainer/itemlistdetail";
 import "../itemdetailcontainer/itemdetailcontainer.scss";
+import Loader from "../loader/loader";
 import { cartContext } from "../../context/cartContext";
 
-function ItemDetailContainer() {
+function ItemDetailContainer({}) {
 
-    const [product, setProduct] = useState([]) ;
+    const [product, setProduct] = useState(null) ;
     const context = useContext(cartContext);
     const id = useParams().id;  
 
@@ -15,7 +16,7 @@ function ItemDetailContainer() {
         return new Promise((resolve, reject) => {    
             setTimeout(() => {    
                 return resolve(productos)            
-            }, 100)
+            }, 2000)
         })
     }
     useEffect(() => {
@@ -29,13 +30,19 @@ function ItemDetailContainer() {
         }
     }
     myProduct();  
-    }, [id]) 
+    }, [id]);
+
+if (product){
 
     return (
         <div className="itemdetail">
             <Itemlistdetail productos={product}></Itemlistdetail> 
         </div>
     )
+
+}
+
+    return <Loader/>
 };
 
 export default ItemDetailContainer; 

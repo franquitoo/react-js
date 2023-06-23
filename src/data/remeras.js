@@ -26,6 +26,7 @@ const Remeras = [
     title: "Remera Oversize 4",
     precio: 65,
     categoria: "remeras oversize",
+    descuento: 30,
     img: "/imagenes/fila.jpg",
   },
 

@@ -41,7 +41,7 @@ const productos = [
     id:5,
     title: "White passion",
     precio: 110,
-    descuento: 20,
+    descuento: 27,
     img: "/imagenes/white.webp",
     stock:20
   },
@@ -64,6 +64,7 @@ const productos = [
     title: "Air max 1",
     precio: 110,
     img: "/imagenes/nikepink.jpeg",
+    descuento: 35,
     stock:10
   },
   {
@@ -78,7 +79,7 @@ const productos = [
     id:9,
     title: "Remera Oversize 4",
     precio: 65,
-    descuento: 10,
+    descuento: 30,
     img: "/imagenes/fila.jpg",
     stock:10
   },

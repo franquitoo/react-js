@@ -7,12 +7,12 @@
 
     &nav{
         display: flex;
-        align-items: center;
     }
 
     &ul{
         display: flex;
         gap: 2rem;
+        align-items: center;
     }
 
     &anchor{
@@ -38,6 +38,9 @@
 
 }
 
+.carritoimg{
+    width: 5rem;
+}
 
 
 

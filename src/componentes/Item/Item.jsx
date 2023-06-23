@@ -1,8 +1,8 @@
 
 import "./Item.scss";
 import Button from "../Button/Button";
-import ItemCount from "../itemCount/itemCount";
 import { Link } from "react-router-dom";
+
 
 
 function Item({title,img,precio,descuento,id}){
@@ -19,6 +19,8 @@ function Item({title,img,precio,descuento,id}){
           <h4 className="itemprecio">${precio}</h4>
           {
           descuento ? <small> Descuento: {descuento} % </small> : "sin descuento"
+          }{
+            descuento > 25 && <small style={{color:"green"}}>Ofertón!</small>
           }
         </div>
         <div className="itemdiv">

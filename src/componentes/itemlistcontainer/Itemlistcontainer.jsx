@@ -4,9 +4,11 @@ import Itemlist from "../itemlist/Itemlist";
 import "../itemlistcontainer/itemlistcontainer.scss"
 
 function getData(){
-  return new Promise(resolve =>{
-    setTimeout(() => {resolve(productos)},2000)
-  })
+  return new Promise ((resolve) =>{
+    setTimeout(() => {
+    resolve(productos);
+   }, 2000);
+  });
 }
 
 function Itemlistcontainer() {

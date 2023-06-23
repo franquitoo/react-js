@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./ItemCount.scss";
 
-
 function ItemCount({stock, onAddToCart}) {
 
 const [count, SetCount] = useState(1);
